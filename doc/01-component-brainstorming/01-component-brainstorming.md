@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Gavin McLaughlan
+- **Dot Number**: McLaughlan.5
+- **Due Date**: 9/19/2025
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +102,13 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+
+Within comnputer science I have been really interested in different ML algorithms and structures such as GAN's, convolutional nets, and a bit of transformers. I also got really into game creation for desktop, mobile, and vr with unity for a bit. Outside of cs, I am a big soccer fan and I play Rugby here at ohio state.
+
+
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +116,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +125,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +192,82 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: ANN float
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A tiny artificial neural network with 1 input node, 1 node in the hidden layer, and one output node.
+    the value can be fit to a new value given an input but can only be fit to 1 value at a time so it basically overfits to a single value.
+    The component would take in a float and spit out a float and would be generally predictable if the value you fit to was inputted but
+    random-ish if it isnt.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void backpropigate(float X, float y)` runs a single backpropigation run through the network with the given input and output
+    - `float run(float X)` runs the network on a given input
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void fit(float X, float y, float err)` fits to within the given error
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - This component would be mutable because the weights would need to change
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - it could use an array, bus since there is only going to be 2 weights just floats would do.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - The learning rate would be a constant unless I wanted to do a lr map but that doesnt really seem necissary
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I should be able to. I can run fit by just conbtinually calling backpropigation
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Photo
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A conponent that takes in pixel values and allows the user to alter the image in different ways
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void setPixel(int x, int y, int[] values)` sets the value of an individual pixel
+    - `int[] readPixel(int x, int y)` reads the value of an individual pixel
+    - `void setImage(int[][][])` sets the entire image
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void rotateImg(int dir)` rotates the image 90 degrees in the given direction (1 - right or -1 - left) would use some linear algebra
+    - `void flipColor(int color1, int color2)` flops the pixel values for the given colors (0-red, 1-green, 2-blue)
+    - `void saveImg(String fileName)` Saves the image
+    - `void drawAscii()` could be interesting to draw the image in the terminal in black and white using ascii art
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - The component would be mutable because the values in the arrays are constantly changing
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would mainly rely on either arrays or sequences
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I will be able to, for example the rotate image function can use the read and write pixel functions to do that
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Player stats
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - holds player stats, similar to how players have certain stats such as speed, physicality, ... on games like fifa and madden.
+    The component can be used to set, store, and manupulate a players stats.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void setStat(String name, float value)` stores a stat with a given name and value
+    - `float getStat(String name)` gets the value of a given stat if it exists
+    - `void removeStat(String name)` removes the stats if it exists
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void multiplyStats(float m)` multiplies a players stats by m (m > 0) (buff / balance)
+    - `void setPlayer(map<String, float> stats)` adds player stats in bulk using maps
+    - `float randomStat()` returns the value of a random stat
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, this component would be mutable because it would use a map on the backend
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it would rely on Map.pair
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, the component would not need any enums or constants
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, the multiply stats function could be implimented using the setStats and getStats functions.
 
 ## Post-Assignment
 
@@ -270,7 +276,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -309,7 +314,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -319,11 +323,9 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -350,7 +352,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

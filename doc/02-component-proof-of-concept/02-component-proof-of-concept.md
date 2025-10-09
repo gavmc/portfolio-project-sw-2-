@@ -1,12 +1,11 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Gavin McLaughlan
+- **Dot Number**: McLaughlan.5
+- **Due Date**: 10/9/2025
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 Previously, you brainstormed three ideas, and hopefully you got some feedback as
 well. However, it's impossible to know how reasonable your design actually is
@@ -30,7 +29,6 @@ the more work you can put in now, the better.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -53,7 +51,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -68,7 +65,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -117,6 +113,39 @@ Below is further rationale/explanation for the rubric items above:
 <!-- TODO: briefly argue your choice of design or design something
 new; then delete this comment -->
 
+The design I chose was my first design, mostly because it is the most interesting to me and relates the most to what I want to get into within computer science.
+
+This is the component:
+
+Component Design #1: ANN float
+01-component-brainstorming.md 2025-09-19
+5 / 9
+Description:
+A tiny artificial neural network with 1 input node, 1 node in the hidden layer, and one output
+node. the value can be fit to a new value given an input but can only be fit to 1 value at a time
+so it basically overfits to a single value. The component would take in a float and spit out a
+float and would be generally predictable if the value you fit to was inputted but random-ish if
+it isnt.
+Kernel Methods:
+void backpropigate(float X, float y)  runs a single backpropigation run through the
+network with the given input and output
+float run(float X)  runs the network on a given input
+Secondary Methods:
+void fit(float X, float y, float err)  fits to within the given error
+Additional Considerations (note: "I don't know" is an acceptable answer for each of the following
+questions):
+Would this component be mutable? Answer and explain:
+This component would be mutable because the weights would need to change
+Would this component rely on any internal classes (e.g.,  Map.Pair )? Answer and explain:
+it could use an array, bus since there is only going to be 2 weights just floats would do.
+Would this component need any enums or constants (e.g.,  Program.Instruction )? Answer
+and explain:
+The learning rate would be a constant unless I wanted to do a lr map but that doesnt
+really seem necissary
+Can you implement your secondary methods using your kernel methods? Answer, explain,
+and give at least one example:
+I should be able to. I can run fit by just conbtinually calling backpropigation
+
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
 > preference is to use GitHub Desktop. From there, you can click the `Branch`
@@ -126,7 +155,6 @@ new; then delete this comment -->
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
