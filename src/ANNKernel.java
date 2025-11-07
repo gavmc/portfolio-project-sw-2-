@@ -20,4 +20,11 @@ public interface ANNKernel extends Standard<ANN> {
      */
     void backpropigate(float x, float y);
 
+    /*
+     * Returns the values of w1 and w2
+     *
+     * @return The values of w1 and w2
+     */
+    float[] getW();
+
 }
