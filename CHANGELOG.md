@@ -1,3 +1,13 @@
+## 2025.11.21
+
+### Added
+
+- Designed kernel implementation for ANN component
+
+### Updated
+
+- created methods for createNewRep, ANN1L, newInstance, clear, transferFrom, sigmoid, sigmoid_deriv, mse, runInfo, getW, backpropigate, and run.
+
 ## 2025.11.7
 
 ### Added
