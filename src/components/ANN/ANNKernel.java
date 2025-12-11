@@ -1,5 +1,10 @@
+package components.ANN;
+
 import components.standard.Standard;
 
+/**
+ * ANN Kernel with primary component methods
+ */
 public interface ANNKernel extends Standard<ANN> {
 
     /*

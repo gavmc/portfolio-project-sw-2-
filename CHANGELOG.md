@@ -1,3 +1,18 @@
+## 2025.12.10
+
+### Added
+
+- Designed test suite for ANN component
+- Designed two different use cases for ANN component
+- updated minor bugs in backpropigate function in ANN1L
+- updated project structure
+- added missing java docs
+
+### Updated
+
+- Changed design to include examples and texts
+- Updated project structure
+
 ## 2025.11.7
 
 ### Added

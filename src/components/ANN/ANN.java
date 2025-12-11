@@ -1,3 +1,8 @@
+package components.ANN;
+
+/**
+ * {@code ANNKernel} with an added secondary method (fit)
+ */
 public interface ANN extends ANNKernel {
 
     /*

@@ -1,3 +1,8 @@
+package components.ANN;
+
+/**
+ * Layered implementations of secondary methods for {@code ANN}.
+ */
 public abstract class ANNSecondary implements ANN {
 
     private float mse(float pred, float actual) {
@@ -9,7 +14,7 @@ public abstract class ANNSecondary implements ANN {
         float current_err = this.mse(this.run(x), y);
         int i = 0;
 
-        while (current_err > target_err && i < 10_000) {
+        while (current_err > target_err && i < 100_000) {
             this.backpropigate(x, y);
             current_err = this.mse(this.run(x), y);
             i++;
@@ -26,10 +31,29 @@ public abstract class ANNSecondary implements ANN {
 
     @Override
     public boolean equals(Object obj) {
-        ANN temp = (ANN) obj;
-        if (this.getW() == temp.getW()) {
+
+        if (this == obj) {
             return true;
         }
+
+        if (obj == null) {
+            return false;
+        }
+
+        ANN temp = (ANN) obj;
+        float[] thisw = this.getW();
+        float[] tempw = temp.getW();
+
+        if (thisw[0] == tempw[0] && thisw[1] == tempw[1]) {
+            return true;
+        }
+
         return false;
     }
+
+    /*
+     * Hash Code is not included because the component is mutable, which would
+     * cause changes to the hash code during training. This could cause problems
+     * in sorting / hash collections.
+     */
 }
